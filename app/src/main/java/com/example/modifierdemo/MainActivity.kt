@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.unit.dp
 import com.example.modifierdemo.ui.theme.ModifierDemoTheme
 
 class MainActivity : ComponentActivity() {
@@ -31,7 +32,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun DemoScreen(modifier: Modifier = Modifier) {
-    val mymodifier = Modifier
+    val mymodifier = Modifier.padding(all = 10.dp)
     Text("Hello Compose", modifier = modifier.then(mymodifier), fontSize = 40.sp, fontWeight = FontWeight.Bold)
 }
 
