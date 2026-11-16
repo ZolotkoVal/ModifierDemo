@@ -6,3 +6,5 @@ local.properties
 *.jks
 *.keystore
 .externalNativeBuild/
+# Preserve this machine's Android Studio JVM selection without publishing it.
+/gradle/gradle-daemon-jvm.properties
