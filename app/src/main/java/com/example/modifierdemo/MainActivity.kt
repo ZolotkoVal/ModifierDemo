@@ -8,6 +8,9 @@ import androidx.compose.foundation.Image
 import androidx.compose.ui.res.painterResource
 import androidx.compose.foundation.border
 import androidx.compose.ui.graphics.Color
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.draw.clip
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Spacer
@@ -51,7 +54,10 @@ fun DemoScreen(modifier: Modifier = Modifier) {
     ) {
         Text("Hello Compose", mymodifier, fontSize = 40.sp, fontWeight = FontWeight.Bold)
         Spacer(Modifier.height(16.dp))
-        CustomImage(R.drawable.vacation)
+        CustomImage(
+            R.drawable.vacation,
+            Modifier.padding(16.dp).width(270.dp).clip(RoundedCornerShape(30.dp))
+        )
     }
 }
 
