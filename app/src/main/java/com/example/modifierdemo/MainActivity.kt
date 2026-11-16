@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.foundation.border
 import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.layout.width
@@ -57,14 +58,19 @@ fun DemoScreen(modifier: Modifier = Modifier) {
         Spacer(Modifier.height(16.dp))
         CustomImage(
             R.drawable.vacation,
-            Modifier.padding(16.dp).width(270.dp).clip(RoundedCornerShape(30.dp))
+            Modifier.padding(16.dp).width(270.dp).clip(RoundedCornerShape(30.dp)),
+            contentDescription = stringResource(R.string.vacation_description)
         )
     }
 }
 
 @Composable
-fun CustomImage(image: Int, modifier: Modifier = Modifier) {
-    Image(painter = painterResource(image), contentDescription = null, modifier = modifier)
+fun CustomImage(
+    image: Int,
+    modifier: Modifier = Modifier,
+    contentDescription: String? = null
+) {
+    Image(painter = painterResource(image), contentDescription = contentDescription, modifier = modifier)
 }
 
 @Preview(showBackground = true)
