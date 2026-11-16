@@ -47,12 +47,13 @@ fun DemoScreen(modifier: Modifier = Modifier) {
     val mymodifier = Modifier
         .border(width = 2.dp, color = Color.Black)
         .padding(all = 10.dp)
+    val secondModifier = Modifier.height(100.dp)
     Column(
         modifier = modifier.padding(20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text("Hello Compose", mymodifier, fontSize = 40.sp, fontWeight = FontWeight.Bold)
+        Text("Hello Compose", mymodifier.then(secondModifier), fontSize = 40.sp, fontWeight = FontWeight.Bold)
         Spacer(Modifier.height(16.dp))
         CustomImage(
             R.drawable.vacation,
