@@ -31,7 +31,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun DemoScreen(modifier: Modifier = Modifier) {
-    Text("Hello Compose", modifier = modifier, fontSize = 40.sp, fontWeight = FontWeight.Bold)
+    val mymodifier = Modifier
+    Text("Hello Compose", modifier = modifier.then(mymodifier), fontSize = 40.sp, fontWeight = FontWeight.Bold)
 }
 
 @Preview(showBackground = true)
