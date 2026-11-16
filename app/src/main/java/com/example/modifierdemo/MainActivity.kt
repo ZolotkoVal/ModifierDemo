@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 import com.example.modifierdemo.ui.theme.ModifierDemoTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ModifierDemoTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting("Android", Modifier.padding(innerPadding))
+                    DemoScreen(Modifier.padding(innerPadding))
                 }
             }
         }
@@ -28,12 +30,12 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(text = "Hello $name!", modifier = modifier)
+fun DemoScreen(modifier: Modifier = Modifier) {
+    Text("Hello Compose", modifier = modifier, fontSize = 40.sp, fontWeight = FontWeight.Bold)
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    ModifierDemoTheme { Greeting("Android") }
+    ModifierDemoTheme { DemoScreen() }
 }
