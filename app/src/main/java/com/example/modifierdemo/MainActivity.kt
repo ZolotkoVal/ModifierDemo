@@ -37,7 +37,7 @@ fun DemoScreen(modifier: Modifier = Modifier) {
     val mymodifier = modifier
         .border(width = 2.dp, color = Color.Black)
         .padding(all = 10.dp)
-    Text("Hello Compose", modifier = mymodifier, fontSize = 40.sp, fontWeight = FontWeight.Bold)
+    Text("Hello Compose", mymodifier, fontSize = 40.sp, fontWeight = FontWeight.Bold)
 }
 
 @Preview(showBackground = true)
