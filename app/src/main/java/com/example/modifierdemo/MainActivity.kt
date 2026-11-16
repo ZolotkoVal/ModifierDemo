@@ -34,10 +34,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun DemoScreen(modifier: Modifier = Modifier) {
-    val mymodifier = Modifier
-        .padding(all = 10.dp)
+    val mymodifier = modifier
         .border(width = 2.dp, color = Color.Black)
-    Text("Hello Compose", modifier = modifier.then(mymodifier), fontSize = 40.sp, fontWeight = FontWeight.Bold)
+        .padding(all = 10.dp)
+    Text("Hello Compose", modifier = mymodifier, fontSize = 40.sp, fontWeight = FontWeight.Bold)
 }
 
 @Preview(showBackground = true)
